@@ -1,0 +1,15 @@
+# Chei și configurări locale
+.env
+
+# Mediu virtual Python
+.venv/
+
+# Cache Python
+__pycache__/
+*.pyc
+
+# Fișiere editor
+.vscode/
+
+# Loguri
+*.log
