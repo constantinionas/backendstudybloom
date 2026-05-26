@@ -1,0 +1,181 @@
+/* ==========================
+   Tranziții globale
+========================== */
+
+body,
+.subject-card,
+.file-card,
+.drop-zone,
+.quiz-settings-card,
+.question-container,
+.final-result-card,
+.saved-file-card,
+.saved-quiz-card,
+.attempt-card,
+.review-current-question,
+.review-question-sidebar,
+.statistics-card,
+.score-evolution-card,
+.answer-distribution-card,
+.difficult-questions-card,
+.recent-results-card,
+.subject-modal {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* ==========================
+   Upload
+========================== */
+
+:root[data-theme="dark"] .drop-zone {
+  border-color: #463747;
+}
+
+:root[data-theme="dark"] .drop-zone:hover,
+:root[data-theme="dark"] .drop-zone.dragging {
+  background: #211923;
+  border-color: var(--pink-primary);
+}
+
+:root[data-theme="dark"] .file-card {
+  background: linear-gradient(110deg, #261a23, #251d31);
+  border-color: var(--border);
+}
+
+:root[data-theme="dark"] .file-type {
+  background: var(--pink-soft);
+}
+
+:root[data-theme="dark"] .warnings-card {
+  background: #2b2218;
+  border-color: #493923;
+}
+
+:root[data-theme="dark"] .warnings-card p,
+:root[data-theme="dark"] .warnings-card small {
+  color: #d9af74;
+}
+
+/* ==========================
+   Materii și organizare
+========================== */
+
+:root[data-theme="dark"] .subjects-welcome-card {
+  background: linear-gradient(110deg, #211722, #211a2c);
+}
+
+:root[data-theme="dark"] .subjects-totals article {
+  background: rgba(31, 25, 36, 0.82);
+}
+
+:root[data-theme="dark"] .empty-subjects,
+:root[data-theme="dark"] .tab-empty-state,
+:root[data-theme="dark"] .statistics-empty-state {
+  border-color: #443648;
+}
+
+:root[data-theme="dark"] .subject-modal {
+  background: var(--surface);
+}
+
+:root[data-theme="dark"] .saved-result-message,
+:root[data-theme="dark"] .best-result-summary {
+  background: linear-gradient(105deg, var(--purple-soft), var(--pink-soft));
+}
+
+/* ==========================
+   Quiz
+========================== */
+
+:root[data-theme="dark"] .quiz-progress-bar {
+  background: #302739;
+}
+
+:root[data-theme="dark"] .answer-choice {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+:root[data-theme="dark"] .answer-choice:hover:not(.correct-selected):not(.wrong-selected):not(.correct-missed) {
+  background: #251d2c;
+  border-color: var(--purple-primary);
+}
+
+:root[data-theme="dark"] .answer-choice.correct-missed {
+  background: #1a2b22;
+}
+
+:root[data-theme="dark"] .review-answer {
+  background: var(--surface-secondary);
+}
+
+:root[data-theme="dark"] .final-mistake-card {
+  background: var(--surface-secondary);
+}
+
+/* ==========================
+   Verificare import
+========================== */
+
+:root[data-theme="dark"] .review-question-list button {
+  background: var(--surface-secondary);
+}
+
+:root[data-theme="dark"] .review-question-list button.active {
+  background: var(--purple-soft);
+  border-color: var(--border-strong);
+}
+
+:root[data-theme="dark"] .review-question-list button > span {
+  background: var(--surface-elevated);
+}
+
+:root[data-theme="dark"] .review-answer-options label:hover {
+  background: #251d2c;
+}
+
+:root[data-theme="dark"] .review-mobile-actions {
+  background: var(--surface);
+  border-color: var(--border);
+}
+
+:root[data-theme="dark"] .review-mobile-actions button:first-child {
+  color: var(--text-secondary);
+  background: var(--surface-secondary);
+  border-color: var(--border);
+}
+
+/* ==========================
+   Statistici
+========================== */
+
+:root[data-theme="dark"] .statistics-tooltip {
+  background: var(--surface-elevated);
+}
+
+:root[data-theme="dark"] .recent-result-row:hover {
+  border-color: var(--border-strong);
+  background: var(--purple-soft);
+}
+
+:root[data-theme="dark"] .recent-result-percentage {
+  background: var(--surface-elevated);
+}
+
+/* ==========================
+   Câmpuri și selecturi
+========================== */
+
+:root[data-theme="dark"] input,
+:root[data-theme="dark"] select {
+  color: var(--text-primary);
+}
+
+:root[data-theme="dark"] select option {
+  color: var(--text-primary);
+  background: var(--surface);
+}

@@ -1,0 +1,433 @@
+.statistics-page {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.statistics-heading h2 {
+  margin-bottom: 7px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 500;
+}
+
+.statistics-heading p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.statistics-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.statistics-card {
+  min-height: 108px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.statistics-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+}
+
+.statistics-icon.tests {
+  color: var(--purple-primary);
+  background: var(--purple-soft);
+}
+
+.statistics-icon.average {
+  color: var(--pink-dark);
+  background: var(--pink-soft);
+}
+
+.statistics-icon.best {
+  color: var(--green);
+  background: var(--green-soft);
+}
+
+.statistics-icon.latest {
+  color: var(--orange);
+  background: var(--orange-soft);
+}
+
+.statistics-card strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 29px;
+  font-weight: 600;
+}
+
+.statistics-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.statistics-main-grid {
+  display: grid;
+  grid-template-columns: minmax(500px, 1fr) 300px;
+  gap: 18px;
+}
+
+.score-evolution-card,
+.answer-distribution-card,
+.difficult-questions-card,
+.recent-results-card {
+  padding: 23px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 21px;
+  box-shadow: var(--shadow-soft);
+}
+
+.score-evolution-card header h3,
+.difficult-questions-card header h3,
+.recent-results-card header h3,
+.answer-distribution-card h3 {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.score-evolution-card header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-evolution-card header h3 svg {
+  color: var(--purple-primary);
+}
+
+.score-evolution-card header p,
+.difficult-questions-card header p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.score-chart-container {
+  width: 100%;
+  height: 285px;
+  margin-top: 26px;
+}
+
+.statistics-tooltip {
+  padding: 11px 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  box-shadow: var(--shadow-soft);
+}
+
+.statistics-tooltip strong {
+  max-width: 190px;
+  font-size: 13px;
+}
+
+.statistics-tooltip span {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.statistics-tooltip p {
+  color: var(--purple-dark);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.distribution-list {
+  margin-top: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.distribution-item {
+  padding: 13px;
+  display: grid;
+  grid-template-columns: 11px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-secondary);
+  border-radius: 12px;
+}
+
+.distribution-item > span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.distribution-item p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.distribution-item strong {
+  font-size: 20px;
+}
+
+.distribution-item.correct > span {
+  background: var(--green);
+}
+
+.distribution-item.partial > span {
+  background: var(--orange);
+}
+
+.distribution-item.wrong > span {
+  background: var(--red);
+}
+
+.distribution-item.correct strong {
+  color: var(--green);
+}
+
+.distribution-item.partial strong {
+  color: var(--orange);
+}
+
+.distribution-item.wrong strong {
+  color: var(--red);
+}
+
+.best-result-summary {
+  margin-top: 24px;
+  padding: 17px 15px;
+  text-align: center;
+  background: linear-gradient(110deg, var(--purple-soft), var(--pink-soft));
+  border-radius: 14px;
+}
+
+.best-result-summary p {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.best-result-summary strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--purple-dark);
+  font-size: 34px;
+}
+
+.best-result-summary span {
+  display: block;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.statistics-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+}
+
+.difficult-questions-list {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.difficult-question-row {
+  padding: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--surface-secondary);
+  border-radius: 13px;
+}
+
+.difficulty-position {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--red);
+  background: var(--red-soft);
+  border-radius: 9px;
+  font-weight: 700;
+}
+
+.difficult-question-row div {
+  min-width: 0;
+}
+
+.difficult-question-row strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.difficult-question-row p {
+  margin-bottom: 7px;
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.difficult-question-row small {
+  color: var(--red);
+  font-size: 12px;
+}
+
+.no-difficult-questions {
+  min-height: 190px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 11px;
+  text-align: center;
+  color: var(--green);
+}
+
+.no-difficult-questions p {
+  max-width: 260px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.recent-results-list {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.recent-result-row {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  background: var(--surface-secondary);
+  border: 1px solid transparent;
+  border-radius: 13px;
+}
+
+.recent-result-row:hover {
+  border-color: #dfc9f2;
+  background: var(--purple-soft);
+}
+
+.recent-result-percentage {
+  min-width: 59px;
+  padding: 9px 7px;
+  color: var(--purple-dark);
+  background: white;
+  border-radius: 9px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.recent-result-row div {
+  min-width: 0;
+}
+
+.recent-result-row strong {
+  display: block;
+  margin-bottom: 5px;
+  overflow: hidden;
+  font-size: 14px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.recent-result-row p {
+  margin-bottom: 6px;
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--purple-dark);
+  font-size: 12px;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.recent-result-row small {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.statistics-empty-state {
+  min-height: 350px;
+  padding: 40px 22px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 14px;
+  text-align: center;
+  color: var(--purple-primary);
+  background: var(--surface);
+  border: 1px dashed #e5d5df;
+  border-radius: 23px;
+}
+
+.statistics-empty-state h2 {
+  color: var(--text-primary);
+  font-size: 22px;
+}
+
+.statistics-empty-state p {
+  max-width: 420px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+@media (max-width: 1060px) {
+  .statistics-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .statistics-main-grid,
+  .statistics-bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 580px) {
+  .statistics-heading h2 {
+    font-size: 25px;
+  }
+
+  .statistics-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .score-evolution-card,
+  .answer-distribution-card,
+  .difficult-questions-card,
+  .recent-results-card {
+    padding: 18px 15px;
+  }
+
+  .score-chart-container {
+    height: 245px;
+  }
+}

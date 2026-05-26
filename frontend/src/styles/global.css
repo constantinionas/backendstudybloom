@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  color: var(--text-primary);
+  background:
+    radial-gradient(circle at 8% 6%, #ffe9ed 0, transparent 29%),
+    radial-gradient(circle at 92% 4%, #f5eafb 0, transparent 32%),
+    var(--background);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+:root[data-theme="dark"] body {
+  background:
+    radial-gradient(circle at 8% 6%, rgba(216, 89, 131, 0.13) 0, transparent 30%),
+    radial-gradient(circle at 92% 4%, rgba(133, 81, 191, 0.17) 0, transparent 34%),
+    var(--background);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
